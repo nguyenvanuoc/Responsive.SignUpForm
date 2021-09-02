@@ -1,0 +1,141 @@
+/*Var color*/
+
+$bg:#A7D7C5;
+$bg1:#F6FBF9;
+$border:rgba(#000,0.1);
+$main:#84C7AE;
+$title:#212B27;
+$text:#32403B;
+
+/*Var font size*/
+$font-size-normal:1rem;
+$font-size-small:0.875rem;
+$font-size-big:2rem;
+
+$paddinng-size-normal:1rem;
+$paddinng-size-big:2rem;
+$border-radius-big:1.6rem;
+$border-radius-small:0.5rem;
+
+
+
+/*Reset*/
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body,html{
+    font-family: 'Karla', sans-serif;
+    height: 100%;
+    font-size: 24px;
+}
+.login-wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: $paddinng-size-big;
+}
+.box-form{
+    max-width: 700px;
+    background: $bg1;
+    padding:$paddinng-size-big;
+    border-radius: $border-radius-big;
+    text-align: center;
+    .form-header{
+        margin-bottom: $paddinng-size-normal;
+        max-width: 480px;
+        margin: auto;
+        margin-bottom: $paddinng-size-normal;
+        .title{
+            color: $title;
+            font-weight: bold;
+            font-size: $font-size-big;
+        }
+        .subtitle{
+            color: $text;
+        }
+    }
+    .form-group{
+        margin-bottom: $paddinng-size-normal;
+    }
+    .form-control{
+        height: 3rem;
+        padding: $paddinng-size-normal;
+        font-size: 1rem;
+        width: 100%;
+        background: #fff;
+        border:2px solid $border;
+        border-radius: $border-radius-small;
+        &:focus{
+            outline: 0px;
+            border-color: $main;
+        }
+        &::placeholder{
+            color: rgba(#000,0.5);
+        }
+
+
+    }
+    .actions{
+        text-align: center;
+        margin-bottom: $paddinng-size-normal;
+        .btn{
+            width: 100%;
+            max-width: 400px;
+            border-radius: $border-radius-small;
+            background: $main;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 0.7rem 2rem;
+            border:0px;
+            font-weight: bold;
+
+        }
+    }
+    .bottom{
+        font-size: $font-size-small;
+        .link{
+            color: $text;
+            &:hover{
+                color: $main;
+            }
+        }
+    }
+
+}
+
+
+
+
+/*Responsive screen <=1600*/
+
+@media(max-width:1600px){
+    html,body{
+        font-size: 16px;
+    }
+    .box-form{
+        max-width: 400px;
+    }
+}
+
+/*Responsive screen <=768*/
+
+@media(max-width:768px){
+    html,body{
+        font-size: 14px;
+    }
+    .box-form{
+        padding: 1.5rem;
+        .form-header{
+            .title{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
